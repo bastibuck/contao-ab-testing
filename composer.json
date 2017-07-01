@@ -1,10 +1,10 @@
 {
   "name": "bastibuck/contao-ab-testing",
   "type": "contao-module",
-  "description": "A/B testing with Contao Open Source CMS",
+  "description": "A\/B testing with Contao Open Source CMS",
   "keywords": [
-    "A/B",
-    "A/B test",
+    "A\/B",
+    "A\/B test",
     "landingpage",
     "landing page",
     "multivariate",
