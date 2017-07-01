@@ -2,24 +2,35 @@
   "name": "bastibuck/contao-ab_testing",
   "type": "contao-module",
   "description": "A/B testing with Contao Open Source CMS",
-  "keywords": ["A/B","A/B test","landingpage","landing page"],
+  "keywords": [
+    "A/B",
+    "A/B test",
+    "landingpage",
+    "landing page",
+    "multivariate",
+    "testing"
+  ],
   "homepage": "https://github.com/bastibuck/contao-ab_testing",
-  "license": "LGPL 3",
+  "license": "LGPL-3.0+",
   "authors": [
     {
       "name": "Basti Buck",
       "email": "mail@bastibuck.de",
-      "homepage": "http://www.bastibuck.de"
+      "homepage": "http://www.bastibuck.de",
+      "role": "Developer"
     }
   ],
+  "support": {
+    "issues": "https://github.com/bastibuck/contao-ab_testing/issues"
+  },
   "require": {
     "php": ">=5.4.0",
-    "contao/core-bundle": "^3.5"
+    "contao/core-bundle": "^3.5",
+    "contao-community-alliance/composer-plugin": "~2.4 || ~3.0",
   },
   "autoload": {
     "classmap": [
-      "classes",
-      "pages"
+      ""
     ]
   },
   "extra":{
