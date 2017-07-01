@@ -1,5 +1,5 @@
 {
-  "name": "bastibuck/contao-ab_testing",
+  "name": "bastibuck/contao-ab-testing",
   "type": "contao-module",
   "description": "A/B testing with Contao Open Source CMS",
   "keywords": [
