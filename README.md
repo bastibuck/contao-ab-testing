@@ -16,5 +16,4 @@ This extension doesn't provide analytics! To get insights on statistics of your 
 ---
 
 ## To-Do's
-* Replace Icons
 * Test Contao 4
