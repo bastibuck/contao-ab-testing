@@ -20,6 +20,8 @@ class ABTestingHooks {
   public function returnPageIcon($objPage, $image) {
 
     if(strpos($image, 'ab_testing') !== false) {
+
+      $image = str_replace('gif', 'png', $image);
       $image = 'system/modules/ab_testing/assets/'.$image;
     }
 
