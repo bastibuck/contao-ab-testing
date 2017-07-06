@@ -12,8 +12,3 @@ This way A/B tests or multivariate tests can be performed in Contao Open Source 
 
 ## Notice
 This extension doesn't provide analytics! To get insights on statistics of your visitors you will need to use a analytic software like Google Analytics, PIWIK or similar.
-
----
-
-## To-Do's
-* Test Contao 4
