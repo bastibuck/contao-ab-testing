@@ -22,7 +22,7 @@ class ABTestingHooks {
     if(strpos($image, 'ab_testing') !== false) {
 
       $image = str_replace('gif', 'png', $image); // 3.5 file type
-      $image = str_replace('gif', 'png', $image); // 4.x file type
+      $image = str_replace('svg', 'png', $image); // 4.x file type
       $image = 'system/modules/ab_testing/assets/'.$image;
     }
 
