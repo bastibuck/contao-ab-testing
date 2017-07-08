@@ -15,8 +15,8 @@ namespace Bastibuck;
 class PageABTesting extends \Frontend
 {
   /**
-	 * Redirect evenly to selected pages
-	 */
+   * Redirect evenly to selected pages
+   */
   public function generate($objPage)
   {
     // array of AB pages

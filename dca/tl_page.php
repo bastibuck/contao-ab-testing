@@ -83,16 +83,16 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['ab_cookie_expires'] = array
  */
 class tl_page extends \Backend {
   /**
-	 * Prevent circular references
-	 */
-	public function checkABPages($serializedPages, \DataContainer $dc)
-	{
-		if (in_array($dc->id, deserialize($serializedPages)))
-		{
-			throw new \Exception($GLOBALS['TL_LANG']['ERR']['circularReference']);
-		}
+   * Prevent circular references
+   */
+  public function checkABPages($serializedPages, \DataContainer $dc)
+  {
+    if (in_array($dc->id, deserialize($serializedPages)))
+    {
+      throw new \Exception($GLOBALS['TL_LANG']['ERR']['circularReference']);
+    }
 
-		return $serializedPages;
-	}
+    return $serializedPages;
+  }
 
 }
