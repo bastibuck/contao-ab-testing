@@ -8,8 +8,6 @@ This extension provides a new page type to evenly distribute visitors within the
 
 This way A/B tests or multivariate tests can be performed in Contao Open Source CMS.
 
----
-
 ## Features
 * Select one or more pages to be tested
 * Set a cookie expiring time
