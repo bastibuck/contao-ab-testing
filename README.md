@@ -11,6 +11,7 @@ This way A/B tests or multivariate tests can be performed in Contao Open Source 
 ## Features
 * Select one or more pages to be tested
 * Set a cookie expiring time
+* adds new Content Element to set a Custom Variable easily
 
 ## Notice
 This extension doesn't provide analytics! To get insights on statistics of your visitors you will need to use a analytic software like Google Analytics, PIWIK or similar.
