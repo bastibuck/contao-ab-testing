@@ -13,6 +13,13 @@
 $GLOBALS['TL_PTY']['ab_testing'] = 'PageABTesting';
 
 /**
+ * add new CEs
+ */
+$GLOBALS['TL_CTE']['ab_testing'] = array(
+  'piwik_setCustomVariable'		=> 'PiwikSetCustomVariable'
+);
+
+/**
  * Hooks
  */
 // get static custom icon
