@@ -19,27 +19,30 @@ class PageABTesting extends \Frontend
    */
   public function generate($objPage)
   {
-    // array of AB pages
-    $arrABPages = deserialize($objPage->ab_pages);
-
-    // get the next page to redirect to
-    if($objPage->ab_lastPage != 0) {
-      $intLastKey = array_search($objPage->ab_lastPage, $arrABPages);
-      $intNextPage = $arrABPages[$intLastKey + 1];
-
-      // get first page in array if last entry was reached
-      if(!$intNextPage) {
-        $intNextPage = $arrABPages[0];
-      }
-    }
-    // get first page in AB pages on first ever visit
-    else {
-      $intNextPage = $arrABPages[0];
-    }
-
     // redirect returning visitors
     if(\Input::cookie($objPage->ab_cookie_name)) {
       $intNextPage = \Input::cookie($objPage->ab_cookie_name);
+      $returningVisitor = true;
+    }
+    // redirect first time visitor
+    else {
+      // array of AB pages
+      $arrABPages = deserialize($objPage->ab_pages);
+
+      // get the next page to redirect to
+      if($objPage->ab_lastPage != 0) {
+        $intLastKey = array_search($objPage->ab_lastPage, $arrABPages);
+        $intNextPage = $arrABPages[$intLastKey + 1];
+
+        // get first page in array if last entry was reached
+        if(!$intNextPage) {
+          $intNextPage = $arrABPages[0];
+        }
+      }
+      // get first page in AB pages on first ever visit
+      else {
+        $intNextPage = $arrABPages[0];
+      }
     }
 
     // get next page object (returns FALSE if it's not published or found)
@@ -110,14 +113,14 @@ class PageABTesting extends \Frontend
     }
     // taken from PageForward (Contao Core) - END ////////
 
+    if(!$returningVisitor) {
+      // set new value for last page redirected
+      \Database::getInstance()
+        ->prepare('UPDATE tl_page SET ab_lastPage = ? WHERE id = ?')
+        ->execute($objNextPage->id, $objPage->id);
+    }
 
-
-    // set new value for last page redirected
-    \Database::getInstance()
-      ->prepare('UPDATE tl_page SET ab_lastPage = ? WHERE id = ?')
-      ->execute($objNextPage->id, $objPage->id);
-
-    // set a cookie for returning visitors
+    // set/renew a cookie to identify returning visitors
     if($objPage->ab_cookie_expires == 0) {
       $intExpires = 0; // end of session
     }
