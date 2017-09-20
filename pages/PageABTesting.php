@@ -19,16 +19,16 @@ class PageABTesting extends \Frontend
    */
   public function generate($objPage)
   {
-    // redirect returning visitors
-    if(\Input::cookie($objPage->ab_cookie_name)) {
+    // array of AB pages
+    $arrABPages = deserialize($objPage->ab_pages);
+
+    // redirect returning visitors (if page still is within test)
+    if(in_array(\Input::cookie($objPage->ab_cookie_name), $arrABPages)) {
       $intNextPage = \Input::cookie($objPage->ab_cookie_name);
       $returningVisitor = true;
     }
     // redirect first time visitor
     else {
-      // array of AB pages
-      $arrABPages = deserialize($objPage->ab_pages);
-
       // get the next page to redirect to
       if($objPage->ab_lastPage != 0) {
         $intLastKey = array_search($objPage->ab_lastPage, $arrABPages);
