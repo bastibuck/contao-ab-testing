@@ -14,7 +14,7 @@ This way A/B tests can be performed in Contao Open Source CMS.
 * adds new Content Element to set a PIWIK Custom Variable easily
 
 ## How does the extension work?
-![A/B Testing visitor flow](../screens/AB-Test-Extension.jpg | width=700)
+![A/B Testing visitor flow](../screens/AB-Test-Extension.jpg)
 
 The visitor flow is visualized in the graphic above and shows how the extension works.
 
