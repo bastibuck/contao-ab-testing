@@ -7,7 +7,7 @@
  * @copyright   Basti Buck, 2017
  */
 
-namespace Bastibuck;
+namespace Bastibuck\ABTesting\Hooks;
 
 /**
  * class providing hooks functions

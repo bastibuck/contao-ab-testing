@@ -23,4 +23,4 @@ $GLOBALS['TL_CTE']['ab_testing'] = array(
  * Hooks
  */
 // get static custom icon
-$GLOBALS['TL_HOOKS']['getPageStatusIcon'][] = array('ABTestingHooks', 'returnPageIcon');
+$GLOBALS['TL_HOOKS']['getPageStatusIcon'][] = array('Bastibuck\ABTesting\Hooks\ABTestingHooks', 'returnPageIcon');
