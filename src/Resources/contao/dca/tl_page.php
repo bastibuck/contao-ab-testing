@@ -34,7 +34,7 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['ab_pages'] = array
   'foreignKey'              => 'tl_page.title',
   'save_callback' => array
   (
-    array('Bastibuck\tl_page', 'checkABPages')
+    array('Bastibuck\ABTesting\DCA\Backend', 'checkABPages')
   ),
   'eval'                    => array
   (
@@ -76,23 +76,3 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['ab_cookie_expires'] = array
   ),
   'sql'                     => "int(10) unsigned NOT NULL default '0'"
 );
-
-
-/**
- * class providing small functions for tl_page
- */
-class tl_page extends \Backend {
-  /**
-   * Prevent circular references
-   */
-  public function checkABPages($serializedPages, \DataContainer $dc)
-  {
-    if (in_array($dc->id, deserialize($serializedPages)))
-    {
-      throw new \Exception($GLOBALS['TL_LANG']['ERR']['circularReference']);
-    }
-
-    return $serializedPages;
-  }
-
-}
