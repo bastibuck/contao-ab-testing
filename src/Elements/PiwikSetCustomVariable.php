@@ -7,7 +7,7 @@
  * @copyright   Basti Buck, 2017
  */
 
-namespace Bastibuck;
+namespace Bastibuck\ABTesting\Elements;
 
 class PiwikSetCustomVariable extends \ContentElement
 {
