@@ -7,7 +7,7 @@
  * @copyright   Basti Buck, 2017
  */
 
-namespace Bastibuck;
+namespace Bastibuck\ABTesting\Pages;
 
 /**
  * adds a new page type to Contao
