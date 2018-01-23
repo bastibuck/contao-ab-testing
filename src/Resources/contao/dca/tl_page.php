@@ -15,9 +15,7 @@ $GLOBALS['TL_DCA']['tl_page']['palettes']['ab_testing'] = '
   {redirect_legend},ab_pages,ab_cookie_name,ab_cookie_expires;
   {protected_legend:hide},protected;
   {chmod_legend:hide},includeChmod;
-  {expert_legend:hide},cssClass,sitemap,hide,guests;
-  {tabnav_legend:hide},tabindex,accesskey;
-  {publish_legend},published;
+  {publish_legend},published,start,stop;
 ';
 
 // Fields
