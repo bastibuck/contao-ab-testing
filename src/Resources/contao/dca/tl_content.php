@@ -3,7 +3,7 @@
 /**
  * @package     A/B-Testing
  * @author      Basti Buck (http://www.bastibuck.de)
- * @license     LGPL
+ * @license     LGPL-3.0-or-later
  * @copyright   Basti Buck, 2017
  */
 
