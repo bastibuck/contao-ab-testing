@@ -7,8 +7,6 @@
  * @copyright   Basti Buck, 2017
  */
 
-namespace Bastibuck;
-
 // Palettes
 $GLOBALS['TL_DCA']['tl_page']['palettes']['ab_testing'] = '
   {title_legend},title,alias,type;
