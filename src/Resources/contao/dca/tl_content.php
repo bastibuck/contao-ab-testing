@@ -7,8 +7,6 @@
  * @copyright   Basti Buck, 2017
  */
 
-namespace Bastibuck;
-
 // Palettes
 $GLOBALS['TL_DCA']['tl_content']['palettes']['piwik_setCustomVariable'] = '
   {type_legend},type;
