@@ -26,15 +26,11 @@
     "contao/core-bundle": "~4.1"
   },
   "autoload": {
-    "classmap": [
-      ""
-    ]
-  },
-  "extra":{
-    "contao":{
-      "sources":{
-        "":"system/modules/ab_testing"
-      }
+    "psr-4": {
+      "Bastibuck\\ABTesting\\": "src/"
     }
+  },
+  "extra": {
+    "contao-manager-plugin": "Bastibuck\\ABTesting\\ContaoManager\\ContaoManagerPlugin"
   }
 }
