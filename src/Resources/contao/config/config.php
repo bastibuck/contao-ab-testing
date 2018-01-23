@@ -10,7 +10,7 @@
 /**
  * add new Page type
  */
-$GLOBALS['TL_PTY']['ab_testing'] = 'PageABTesting';
+$GLOBALS['TL_PTY']['ab_testing'] = 'Bastibuck\ABTesting\Pages\PageABTesting';
 
 /**
  * add new CEs
