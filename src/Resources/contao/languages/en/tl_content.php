@@ -8,10 +8,10 @@
  */
 
 // Legends
-$GLOBALS['TL_LANG']['tl_content']['piwik_legend'] = 'PIWIK: Custom Variable';
+$GLOBALS['TL_LANG']['tl_content']['piwik_legend'] = 'Matomo / PIWIK: Custom Variable';
 
 // Fields
-$GLOBALS['TL_LANG']['tl_content']['customVar_index'] = array('Index', 'Index PIWIK will save this variable on.');
+$GLOBALS['TL_LANG']['tl_content']['customVar_index'] = array('Index', 'Index this variable will be saved on.');
 $GLOBALS['TL_LANG']['tl_content']['customVar_name'] = array('Name', 'Custom Variable name (e.g. \'Landingpage\')');
 $GLOBALS['TL_LANG']['tl_content']['customVar_value'] = array('Value', 'Value that will be saved in this Custom Variable');
 $GLOBALS['TL_LANG']['tl_content']['customVar_scope'] = array('Scope', 'Scope of this Variable.');
