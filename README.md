@@ -12,11 +12,12 @@ This way A/B tests can be performed in Contao Open Source CMS.
 * Select one or more pages to be tested
 * test pages are rendered within the the new page type so all versions have the same url
 * Set a cookie and its' expiring time to identify returning visitors
-* adds new Content Element to set a Matomo / PIWIK Custom Variable easily
+* adds a new Content Element to set a Matomo / PIWIK Custom Variable easily
 
 ## Notice
-This extension doesn't provide analytics! To get insights on statistics of your visitors you will need to use an analytic software like Google Analytics, Matomo/PIWIK or similar.
-### How does the extension work?
+This extension **doesn't** provide analytics! To get insights on statistics of your visitors you will need to use an analytic software like Google Analytics, Matomo/PIWIK or similar.
+
+## How does the extension work?
 ![A/B Testing visitor flow](../screens/AB-Test-Extension.jpg)
 
 The visitor flow is visualized in the graphic above and shows how the extension works.
