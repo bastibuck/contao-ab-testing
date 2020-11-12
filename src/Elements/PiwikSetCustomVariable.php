@@ -10,21 +10,23 @@ namespace Bastibuck\ABTesting\Elements;
 
 class PiwikSetCustomVariable extends \ContentElement
 {
-  protected $strTemplate = 'ce_piwik_setCustomVar';
-
   public function generate()
   {
     if (TL_MODE == 'BE')
     {
       $objTemplate = new \BackendTemplate('be_wildcard');
-      $objTemplate->wildcard = '### ' . utf8_strtoupper($GLOBALS['TL_LANG']['CTE']['piwik_setCustomVariable'][0]). ' ###';
-      $strBuildTitle = '<span class="tl_gray" style="font-weight: normal">[';
-      $strBuildTitle .= $this->customVar_index.', ';
-      $strBuildTitle .= '\''.$this->customVar_name.'\', ';
-      $strBuildTitle .= '\''.$this->customVar_value.'\', ';
-      $strBuildTitle .= '\''.$this->customVar_scope.'\'';
-      $strBuildTitle .= ']</span>';
-      $objTemplate->title = $strBuildTitle;
+
+      $customVarValues = '<span class="tl_gray" style="font-weight: bold">[';
+      $customVarValues .= $this->customVar_index.', ';
+      $customVarValues .= '\''.$this->customVar_name.'\', ';
+      $customVarValues .= '\''.$this->customVar_value.'\', ';
+      $customVarValues .= '\''.$this->customVar_scope.'\'';
+      $customVarValues .= ']</span>';
+
+      $wildCard = utf8_strtoupper($GLOBALS['TL_LANG']['CTE']['piwik_setCustomVariable'][0]);
+
+      $objTemplate->wildcard = "### {$wildCard} {$customVarValues}";
+
       return $objTemplate->parse();
     }
 
@@ -33,16 +35,16 @@ class PiwikSetCustomVariable extends \ContentElement
 
   public function compile()
   {
-    $arrCustomVariable = array
-    (
-      'index' => $this->customVar_index,
-      'name'  => '"'.$this->customVar_name.'"',
-      'value' => '"'.$this->customVar_value.'"',
-      'scope' => '"'.$this->customVar_scope.'"'
-    );
+    $scriptHtml = "<script>
+      var _paq = _paq || [];
+      _paq.push(['setCustomVariable',
+        {$this->customVar_index},
+        '{$this->customVar_name}',
+        '{$this->customVar_value}',
+        '{$this->customVar_scope}'
+      ]);
+    </script>";
 
-    $this->Template->customVar = $arrCustomVariable;
+    $GLOBALS['TL_HEAD'][] = $scriptHtml;
   }
-
-
 }
