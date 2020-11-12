@@ -7,7 +7,7 @@
  */
 
 // Legends
-$GLOBALS['TL_LANG']['tl_content']['piwik_legend'] = 'Matomo / PIWIK: Custom Variable';
+$GLOBALS['TL_LANG']['tl_content']['piwik_legend'] = 'Matomo: Custom Variable';
 
 // Fields
 $GLOBALS['TL_LANG']['tl_content']['customVar_index'] = array('Index', 'Index, auf dem die Variable gespeichert werden soll.');

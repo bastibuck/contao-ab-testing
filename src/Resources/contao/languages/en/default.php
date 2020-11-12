@@ -11,4 +11,4 @@ $GLOBALS['TL_LANG']['PTY']['ab_testing'] = array('A/B-Test', 'This page splits t
 
 // Content Elements
 $GLOBALS['TL_LANG']['CTE']['ab_testing'] = array('A/B-Testing', 'Content Elements for A/B-Testing');
-$GLOBALS['TL_LANG']['CTE']['piwik_setCustomVariable'] = array('Matomo / PIWIK: set Custom Variable', 'Set a Custom Variable for Matomo / PIWIK via a content element.');
+$GLOBALS['TL_LANG']['CTE']['piwik_setCustomVariable'] = array('Matomo: Custom Variable', 'Set a Custom Variable for Matomo via a content element.');
