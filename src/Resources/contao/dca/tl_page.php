@@ -12,6 +12,7 @@ $GLOBALS['TL_DCA']['tl_page']['palettes']['ab_testing'] = '
   {redirect_legend},ab_pages,ab_cookie_name,ab_cookie_expires;
   {protected_legend:hide},protected;
   {chmod_legend:hide},includeChmod;
+  {expert_legend:hide},hide,noSearch,guests,sitemap;
   {publish_legend},published,start,stop;
 ';
 

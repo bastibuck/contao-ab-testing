@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16">
+    <path fill="#FFF" d="M13.12 4.96v9.12H2.88V1.92h7.296l2.944 3.04z" />
+    <linearGradient id="a" x1="9245.242" y1="-13232.848" x2="9353.533" y2="-13341.139"
+        gradientTransform="matrix(.032 0 0 -.032 -289.596 -412.384)">
+        <stop offset="0" stop-color="#ccc" />
+        <stop offset="1" stop-color="#b3b3b3" />
+    </linearGradient>
+    <ellipse fill="url(#a)" cx="7.984" cy="12.8" rx="3.44" ry=".416" />
+    <path fill="#FFF" d="M9.984 2.08l.256 3.2 2.88-.32-3.136-2.88z" />
+
+    <text font-weight="bold" stroke="null"
+        transform="matrix(1.2509090900421143,0,0,1.2509090900421143,-0.9330681785941124,-0.5371022708714008) "
+        xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="7" y="7.75395"
+        x="3.23665" stroke-opacity="null" stroke-width="0" fill="#ccc">A</text>
+    <text font-weight="bold" stroke="null"
+        transform="matrix(1.2509090900421143,0,0,1.2509090900421143,-0.9330681785941124,-0.5371022708714008) "
+        xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="7" y="10.71402"
+        x="6.0759" stroke-opacity="null" stroke-width="0" fill="#b3b3b3">B</text>
+
+    <linearGradient id="c" x1="9086.826" y1="-12975.065" x2="9461.826" y2="-13350.065"
+        gradientTransform="matrix(.032 0 0 -.032 -289.596 -412.384)">
+        <stop offset="0" stop-color="#ccc" />
+        <stop offset="1" stop-color="#b3b3b3" />
+    </linearGradient>
+    <path
+        d="m10.323,1.595l-7.923,0.005l0,12.8l11.2,0l0,-9.504l-3.277,-3.301zm2.387,3.301l-2.374,0l-0.01,-2.391l2.384,2.391zm0.25,8.864l-9.92,0l0,-11.52l6.56,0l0,3.424l3.36,0l0,8.096z"
+        fill="url(#c)" />
+</svg>
